@@ -14,7 +14,7 @@ public class Main {
         CRUDOperations crud = new CRUDOperations();
 
         //----------------------- INSERT INTO KOMANDA -----------------
-        // crud.create("Marko", 25, "2025-01-04", "c:/progf");
+         crud.create("Novi", 26, "2025-01-04", "c:/putanja");
         //-------------------------------------------------------------
 
        //System.out.println("program ucitan db" + dbconn);

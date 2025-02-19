@@ -30,6 +30,11 @@ public class CRUDOperations {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            if (connection != null) {
+                statement.close();
+                connection.close();
+            }
         }
     }
 }
