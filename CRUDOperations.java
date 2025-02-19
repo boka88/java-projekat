@@ -13,7 +13,7 @@ public class CRUDOperations {
         connection = _dbconn.konekcija;
         //System.out.println("Obrada ucitiana connection " + connection);
 
-        PreparedStatement statement = nuSll;
+        PreparedStatement statement = null;
 
         try {
             String query = "INSERT INTO products (name, price, add_date, image) VALUES (?, ?, ?, ?)";
