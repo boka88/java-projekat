@@ -3,6 +3,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.*;
 
+import javax.swing.*;
+
 public class CRUDOperations {
 
     private Connection connection = null;
@@ -30,11 +32,14 @@ public class CRUDOperations {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            if (connection != null) {
-                statement.close();
-                connection.close();
-            }
-        }
+        } finally{
+			if (statement != null){
+				try{
+					statement.close();
+					statement = null;
+				}catch (Exception e){
+					JOptionPane.showMessageDialog(null, "Nije uspeo da zatvori statement");
+                    }
+            }}
     }
 }
